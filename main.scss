@@ -1,0 +1,94 @@
+// @use "sass/variables/variables" as*;
+// layout
+@use "sass/layout/intro" as*;
+// Pages
+@use "sass/pages/about" as *;
+@use "sass/pages/contact" as *;
+@use "sass/pages/hero" as *;
+@use "sass/pages/projects" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color:#c54040;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Orbitron', sans-serif;
+  }
+  p,span,a,b,strong,li {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media (max-width: 1400px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.dotted-svg {
+  width: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--werid-red-color); 
+
+} 
+
+::-webkit-scrollbar-thumb {
+  background: #970C10; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c54040; 
+}
+
+@media (max-width: 550px) {
+  .long-text{
+    display: none;
+  }
+}

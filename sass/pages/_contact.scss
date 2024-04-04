@@ -1,0 +1,87 @@
+@use "../variables/variables" as*;
+
+.contact-container {
+  padding: 50px 0 25px;
+  position: relative;
+  box-shadow: 0 0 0px 1px rgb(233, 233, 233);
+  background-color: $color-five;
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+    }
+    .flip {
+        display: block;
+        margin-top: 40px;
+        width: 120px;
+        height: 50px;
+        transition: .5s;
+        transition-timing-function: ease-in;
+        cursor: pointer;
+        .box {
+          width: 120px;
+          height: 50px;
+          position: relative;
+          padding: 10px 15px;
+          transform-style: preserve-3d;
+          transition: .5s;
+          div {
+            position: absolute;
+            padding: inherit;
+            width: 120px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 700;
+          }
+          .b4 {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $werid-red-color;
+            box-shadow: inset 0.2rem 0.2rem 0.5rem red , inset -0.2rem -0.2rem 0.5rem rgb(93, 0, 0);
+          }
+          
+          .b6 {
+            left: 50%;
+            top: 50%;
+            transform: rotateX(90deg) translate3d(-50%, -45%, 0);
+            background-color: $werid-color;
+            box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(86, 0, 0), inset -0.2rem -0.2rem 0.5rem red;
+          }
+        }
+        &:hover {
+          transform: translateY(25px);
+        }
+        &:hover .box {
+          transform: rotateX(270deg);
+        }
+    }
+  }
+}
+footer {
+  position: relative;
+  background-color: $color-five;
+  padding:10px 0;
+  font-size: 14px;
+  text-align: center;
+  color: $werid-red-color;
+  .social-long-text {
+    display: none;
+  }
+  @media (max-width: 550px) {
+    .social-long-text {
+      display: block;
+      font-size: 21px;
+      padding:10px 0;
+      a {
+        color: $werid-color;
+      }
+    }
+  }
+}
